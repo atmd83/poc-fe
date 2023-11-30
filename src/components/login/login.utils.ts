@@ -4,7 +4,7 @@ import axios from "axios";
 import { ethers } from "ethers";
 import { SiweMessage } from "siwe";
 
-const API_URL = "http://localhost:3001/v1/user";
+const API_URL = "https://poc-api-w8pa.onrender.com/v1/user";
 
 export const createMessage = async (address: any, statement: any) => {
   const nonce = await axios.get(`${API_URL}/nonce`, { withCredentials: true });
