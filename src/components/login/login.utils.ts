@@ -17,14 +17,14 @@ export const createMessage = async (address: any, statement: any) => {
     statement,
     uri: window.location.origin,
     version: "1",
-    chainId: "1",
+    chainId: 1,
     nonce: nonce.data,
   });
   return message.prepareMessage();
 };
 
 export const sign = async (msg: string) => {
-  const provider = new ethers.BrowserProvider(window.ethereum);
+  const provider = new ethers.BrowserProvider((window as any).ethereum);
   const signer = await provider.getSigner();
 
   provider

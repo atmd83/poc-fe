@@ -64,7 +64,7 @@ const User = () => {
               placeholder="Enter your username"
               onChange={(evt: any) => setUsername(evt.target.value)}
               required
-              defaultValue={user.username}
+              defaultValue={(user as any).username}
             />
           </div>
           <div>
@@ -76,7 +76,7 @@ const User = () => {
               id="email"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Enter your email"
-              defaultValue={user.email}
+              defaultValue={(user as any).email}
               required
               onChange={(evt: any) => setEmail(evt.target.value)}
             />
@@ -92,7 +92,7 @@ const User = () => {
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Enter your bio"
               required
-              defaultValue={user.bio}
+              defaultValue={(user as any).bio}
               onChange={(evt: any) => setBio(evt.target.value)}
             ></textarea>
           </div>
@@ -101,9 +101,9 @@ const User = () => {
               Address
             </label>
             <input
-              value={`${user.address.slice(0, 6)} ..... ${user.address.substr(
-                user.address.length - 5
-              )}`}
+              value={`${(user as any).address.slice(0, 6)} ..... ${(
+                user as any
+              ).address.substr((user as any).address.length - 5)}`}
               type="text"
               id="last_name"
               readOnly

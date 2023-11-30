@@ -32,7 +32,7 @@ const Login = () => {
   };
 
   if (user) {
-    return <p>{user.username || user.address}</p>;
+    return <p>{(user as any).username || (user as any).address}</p>;
   } else {
     return <p onClick={signAndVerify}>Connect with Metamask</p>;
   }
