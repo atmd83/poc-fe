@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { sign, verify } from "./login.utils";
 
-const API_URL = "https://poc-api-w8pa.onrender.com/v1/user";
+const API_URL = "https://api.tixtix.net/v1/user";
+// const API_URL = "http://localhost:3001/v1/user";
 
 const Login = () => {
   const [user, setUser] = useState(null);

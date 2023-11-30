@@ -5,7 +5,8 @@ import axios from "axios";
 
 import Toast from "../toast";
 
-const API_URL = "https://poc-api-w8pa.onrender.com/v1/user";
+const API_URL = "https://api.tixtix.net/v1/user";
+// const API_URL = "http://localhost:3001/v1/user";
 
 const User = () => {
   const [user, setUser] = useState(null);
